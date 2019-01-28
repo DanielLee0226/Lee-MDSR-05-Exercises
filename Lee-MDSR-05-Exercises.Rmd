@@ -20,7 +20,13 @@ library(lubridate)
 library(mdsr)
 library(Hmisc)
 library(readr)
-library()
+head(Teams)
+attach(Teams)
+library(dplyr)
+library(plyr)
+library(xtable)
+library(mosaicData)
+library(tidyr)
 ```
 
 
@@ -28,13 +34,19 @@ library()
 
 ### Figure 5.2
 ```{r}
-teamID %>%
-  count_seasons()
+count_seasons <- function(teamname){
+  Teams %>%
+    subset(Teams, teamID == teamname) %>%
+    count(Teams, teamID)}
+
 ```
 
 ### Figure 5.3
 ```{r}
-bk_teams <- c("BR1", "BR2", "BR3", "BR4", "BRO", "BRP", "BRF")
+bk_teams <- 
+  c("BR1", "BR2", "BR3", "BR4", "BRO", "BRP", "BRF")
+bk_teams1 <- 
+  sapply(FUN = bk_teams)
 ```
 
 ### Figure 5.4
@@ -42,6 +54,10 @@ bk_teams <- c("BR1", "BR2", "BR3", "BR4", "BRO", "BRP", "BRF")
 Marriage %>%
   select(appdate, ceremonydate, dob) %>%
   glimpse()
+
+Marriage %>%
+  mutate(appdate = mdy(appdate), ceremonydate = mdy(ceremonydate), dob = mdy(dob)) %>%
+  select(appdate, ceremonydate, dob)
 ```
 
 ### Figure 5.5
@@ -49,31 +65,48 @@ Marriage %>%
 
 x1 <- c("1900.45", "$1900.45", "1,900.45", "nearly $2000") 
 x2 <- as.factor(x1)
-parse number(x1)
-parse number(x2) 
+parse_number(x1)
+as.factor(x2) 
 ```
+
 
 ### Figure 5.6
 ```{r}
 tab <- xtable(ds1) 
 print(tab, floating=FALSE)
 
-Treat <- filter(ds1, group=="T") Control <- filter(ds1, group=="C") all <- mutate(Treat, diff = Treat$vals - Control$vals) all
+Treat <- filter(ds1, group=="T") 
+Control <- filter(ds1, group=="C") 
+all <- mutate(Treat, diff = Treat$vals - Control$vals) 
+all
 
+ds1
 ```
 
 ### Figure 5.7
 ```{r}
-Exer5_7 <- 
+data_long <- 
   tibble(
   grp = c("A", "A", "B", "B"), 
   sex = c("F", "M", "F", "M"), 
-  meanL = c(0.22, 0.47, 0.33, 0.55)
+  meanL = c(0.22, 0.47, 0.33, 0.55),
+  sdL = c(0.11, 0.33, 0.11, 0.31),
+  meanR = c(0.34, 0.57, 0.40, 0.65),
+  sdR = c(0.08, 0.33, 0.07, 0.27)
   )
+
+data_long
+
+datawide <-
+  data_long %>%
+  gather(gpr, meanL, spread(sex))
+
+datawide
 ```
 
 ### Figure 5.8
 ```{r}
+dplyr::do(HELPrct)
 
 ```
 

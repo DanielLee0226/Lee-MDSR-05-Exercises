@@ -184,17 +184,18 @@ $(document).ready(function () {
 <h1>Front matter</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudFxucm0obGlzdCA9IGxzKCkpXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmVcbmxpYnJhcnkobW9zYWljKVxubGlicmFyeShMYWhtYW4pXG5saWJyYXJ5KHRpZHl2ZXJzZSlcbmxpYnJhcnkobHVicmlkYXRlKVxubGlicmFyeShtZHNyKVxubGlicmFyeShIbWlzYylcbmBgYCJ9 -->
-<pre class="r"><code># always clean up R environment
-rm(list = ls())
-# load all packages here
-library(mosaic)
-library(Lahman)
-library(tidyverse)
-library(lubridate)
-library(mdsr)
-library(Hmisc)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh4dGFibGUpXG5cbmBgYCJ9 -->
+<pre class="r"><code>library(xtable)
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYeHRhYmxl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpIbWlzY+KAmTpcblxuICAgIGxhYmVsLCBsYWJlbDwtXG4ifQ== -->
+<pre><code>
+Attaching package: ‘xtable’
+
+The following objects are masked from ‘package:Hmisc’:
+
+    label, label&lt;-</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -204,9 +205,11 @@ library(Hmisc)</code></pre>
 <h3>Figure 5.2</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVhbUlEICU+JVxuICBjb3VudF9zZWFzb25zKClcbmBgYCJ9 -->
-<pre class="r"><code>teamID %&gt;%
-  count_seasons()</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY291bnRfc2Vhc29ucyA8LSBmdW5jdGlvbih0ZWFtbmFtZSl7XG4gIFRlYW1zICU+JVxuICAgIHN1YnNldChUZWFtcywgdGVhbUlEID09IHRlYW1uYW1lKSAlPiVcbiAgICBjb3VudChUZWFtcywgdGVhbUlEKX1cbmBgYCJ9 -->
+<pre class="r"><code>count_seasons &lt;- function(teamname){
+  Teams %&gt;%
+    subset(Teams, teamID == teamname) %&gt;%
+    count(Teams, teamID)}</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -215,9 +218,14 @@ library(Hmisc)</code></pre>
 <h3>Figure 5.3</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmtfdGVhbXMgPC0gYyhcIkJSMVwiLCBcIkJSMlwiLCBcIkJSM1wiLCBcIkJSNFwiLCBcIkJST1wiLCBcIkJSUFwiLCBcIkJSRlwiKVxuYGBgIn0= -->
-<pre class="r"><code>bk_teams &lt;- c(&quot;BR1&quot;, &quot;BR2&quot;, &quot;BR3&quot;, &quot;BR4&quot;, &quot;BRO&quot;, &quot;BRP&quot;, &quot;BRF&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmtfdGVhbXMgPC0gYyhcIkJSMVwiLCBcIkJSMlwiLCBcIkJSM1wiLCBcIkJSNFwiLCBcIkJST1wiLCBcIkJSUFwiLCBcIkJSRlwiKVxuYmtfdGVhbXMxIDwtIHNhcHBseShGVU4gPSBia190ZWFtcylcbmBgYCJ9 -->
+<pre class="r"><code>bk_teams &lt;- c(&quot;BR1&quot;, &quot;BR2&quot;, &quot;BR3&quot;, &quot;BR4&quot;, &quot;BRO&quot;, &quot;BRP&quot;, &quot;BRF&quot;)
+bk_teams1 &lt;- sapply(FUN = bk_teams)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZ2V0KGFzLmNoYXJhY3RlcihGVU4pLCBtb2RlID0gXCJmdW5jdGlvblwiLCBlbnZpciA9IGVudmlyKSA6IFxuICBvYmplY3QgJ2JrX3RlYW1zJyBvZiBtb2RlICdmdW5jdGlvbicgd2FzIG5vdCBmb3VuZFxuIn0= -->
+<pre><code>Error in get(as.character(FUN), mode = &quot;function&quot;, envir = envir) : 
+  object 'bk_teams' of mode 'function' was not found</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -230,13 +238,25 @@ library(Hmisc)</code></pre>
   select(appdate, ceremonydate, dob) %&gt;%
   glimpse()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiT2JzZXJ2YXRpb25zOiA5OFxuVmFyaWFibGVzOiAzXG4kIGFwcGRhdGUgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxMC8yOS85NiwgMTEvMTIvOTYsIDExLzE5Lzk2LCAxMi8yLzk2LCAxMi85Lzk2LCAxMi8yNi85NiwgMS84Lzk3LCAyLzHigKZcbiQgY2VyZW1vbnlkYXRlIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDExLzkvOTYsIDExLzEyLzk2LCAxMS8yNy85NiwgMTIvNy85NiwgMTIvMTQvOTYsIDEyLzI2Lzk2LCAxLzI0Lzk3LCAyL+KAplxuJCBkb2IgICAgICAgICAgXHUwMDFiWzNtXHUwMDFiWzM4OzU7MjQ2bTxmY3Q+XHUwMDFiWzM5bVx1MDAxYlsyM20gNC8xMS82NCwgOC82LzY0LCAyLzIwLzYyLCA1LzIwLzU2LCAxMi8xNC82NiwgMi8yMS83MCwgMTAvMTEvNzEsIDEvMzEv4oCmXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiT2JzZXJ2YXRpb25zOiA5OFxuVmFyaWFibGVzOiAzXG4kIGFwcGRhdGUgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxMC8yOS85NiwgMTEvMTIvOTYsIDExLzE5Lzk2LCAxMi8yLzk2LCAxMi85Lzk2LCAxMi8yNi85NiwgMS84Lzk3LCAyL+KAplxuJCBjZXJlbW9ueWRhdGUgXHUwMDFiWzNtXHUwMDFiWzM4OzU7MjQ2bTxmY3Q+XHUwMDFiWzM5bVx1MDAxYlsyM20gMTEvOS85NiwgMTEvMTIvOTYsIDExLzI3Lzk2LCAxMi83Lzk2LCAxMi8xNC85NiwgMTIvMjYvOTYsIDEvMjQvOTcsIDLigKZcbiQgZG9iICAgICAgICAgIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDQvMTEvNjQsIDgvNi82NCwgMi8yMC82MiwgNS8yMC81NiwgMTIvMTQvNjYsIDIvMjEvNzAsIDEwLzExLzcxLCAxLzMx4oCmXG4ifQ== -->
 <pre><code>Observations: 98
 Variables: 3
-$ appdate      [3m[38;5;246m&lt;fct&gt;[39m[23m 10/29/96, 11/12/96, 11/19/96, 12/2/96, 12/9/96, 12/26/96, 1/8/97, 2/1…
-$ ceremonydate [3m[38;5;246m&lt;fct&gt;[39m[23m 11/9/96, 11/12/96, 11/27/96, 12/7/96, 12/14/96, 12/26/96, 1/24/97, 2/…
-$ dob          [3m[38;5;246m&lt;fct&gt;[39m[23m 4/11/64, 8/6/64, 2/20/62, 5/20/56, 12/14/66, 2/21/70, 10/11/71, 1/31/…</code></pre>
+$ appdate      [3m[38;5;246m&lt;fct&gt;[39m[23m 10/29/96, 11/12/96, 11/19/96, 12/2/96, 12/9/96, 12/26/96, 1/8/97, 2/…
+$ ceremonydate [3m[38;5;246m&lt;fct&gt;[39m[23m 11/9/96, 11/12/96, 11/27/96, 12/7/96, 12/14/96, 12/26/96, 1/24/97, 2…
+$ dob          [3m[38;5;246m&lt;fct&gt;[39m[23m 4/11/64, 8/6/64, 2/20/62, 5/20/56, 12/14/66, 2/21/70, 10/11/71, 1/31…</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTWFycmlhZ2UgJT4lXG4gIG11dGF0ZShhcHBkYXRlID0gbWR5KGFwcGRhdGUpLCBjZXJlbW9ueWRhdGUgPSBtZHkoY2VyZW1vbnlkYXRlKSwgZG9iID0gbWR5KGRvYikpICU+JVxuICBzZWxlY3QoYXBwZGF0ZSwgY2VyZW1vbnlkYXRlLCBkb2IpXG5gYGAifQ== -->
+<pre class="r"><code>Marriage %&gt;%
+  mutate(appdate = mdy(appdate), ceremonydate = mdy(ceremonydate), dob = mdy(dob)) %&gt;%
+  select(appdate, ceremonydate, dob)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6OTh9LCJyZGYiOiJINHNJQUFBQUFBQUFBKzJXWFVoVFlSakhqenZPajZWTEV3eUNRZ3BDQkVVdExicGFJWUpCWWQ1a2d1RFpuRHFkWnpJbm1VVHBNSW1nTXVtREtNdFB0TlRRaTI0S3luSklYVVNCU2pqYlBIYVJGUkZCRkFTaG5aMy8vNUNOd3U2OGNhQy84My9lNTMwKzNvZjNiRVY1eGRtbVlwTWdDQVpCTkVZSUJsRjlqRFNvL3lLRVNDRTJ4RVpCRUpQVUIzVkZOS3UwV2laMkNLR1BaU0tOVEc4R2QxUHZvYlpRNTFNZnBaYW9LNmlycWV1cG02aFBrZWRvdjBoOWpicVBIQ1h2Yy8wUjlUTnlodlJ6ZlpIOEFic3ZoalREN2t1bTNrcnVKTE80bmtNZW9MMkFQRVI3Q2JXTmRORGVSTzJsUGt0ZUlkbVhyNXNjSUllNC9vQjh3dnJYNXdDdTdSekNMb3pSNXBUcVF5ZVlzTUlZbVNkNTdDcVhmbCtpVkRhdkQ0OU5UZVNTKzJpM2tJZHAxNGZub3E2aGxxbjE0WjJrYmliMTRWMml2a0hxd3h1amZrZytwdjA1K2IvRDI4akQyVUtkU3VyRHl5WXQ5TXVqTGlMWnA4K21rM1o5ZUtkSkwzbWU2L3J3YmxQM1VJY1BqMzM1bnJLZjlUbUFhenNIWENMRHNyRGF2VkZlV2JSOVNsQUI1UzZOd1pmakdoY09sbWtzYUViOFZndW9PRk0wZHIyRERpVENQMWlDZWhZODJOY2JoZlU3bThEZ2Z2Z3BNWXkvSGZrRzNtUGRuNHg2NXI1UnowSUhPdUEvUDR6NFNqejJ0VitHbnplVGViYUJRMi9CK1JTd3FRc2M0TXR0cmhTOHhaZTc4aHI5ZEZJSGw1RjNpaS96NlVya24yM1U5UGl4Y2RhM0dmYVJPT2lSVVhCd21uRktXVys2b3ZHNkFQdk1WNTdEQnA1WEMvTDdXNkNQMEc4K0RicjlKL1FaNUxlMEpZQzlackR2S2hoNHdYdzlpTi94aVhWVjAyOHY0MzZFMzd3YjdQN004eG5rK1V4aWYyQVM1eERNQVFPdFdNZDNuYnAvR3Z2N3lxQVYzc2ZCTnViOXduUG8xL3pHQzluWGNBcnREdVRwWTd5Z0YvcHVQdU4zSXY3TVRlU2YrZ0R0cjJmZEh2aTlTY0w2MkNMMHZWeXcvenU0VUZhRytncTVqL0duV2YrRktoUzI2cjM1ODh0SmxtcnQrcGVUU0dPMFZGZFhIdktIakxQWjNmWmFsM3hpaFUwc2QxbkRRc1c2WGNjejlIRHg2cDhCSnlKWS8xR1RTWTBuWlZTNDFTMS9xU3phVmVkeHVHUTFtQ0gwYTlNWXRqbkNIV1pJYkpCRHljdlRiVlVOY2sxNlZ1YXVVQXJOQVo5NFBsdFhQSXRJS3VxbEdSa3N5aTVYT21TOVdhTlRzdHFkRkdhMVRhM0xqRHEzUS9ib3ZhalcrZ3lQeXlQcGZpYWJ5NmxidE82RXBWL3NuMUZXWFFzQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["appdate"],"name":[1],"type":["date"],"align":["right"]},{"label":["ceremonydate"],"name":[2],"type":["date"],"align":["right"]},{"label":["dob"],"name":[3],"type":["date"],"align":["right"]}],"data":[{"1":"1996-10-29","2":"1996-11-09","3":"2064-04-11"},{"1":"1996-11-12","2":"1996-11-12","3":"2064-08-06"},{"1":"1996-11-19","2":"1996-11-27","3":"2062-02-20"},{"1":"1996-12-02","2":"1996-12-07","3":"2056-05-20"},{"1":"1996-12-09","2":"1996-12-14","3":"2066-12-14"},{"1":"1996-12-26","2":"1996-12-26","3":"1970-02-21"},{"1":"1997-01-08","2":"1997-01-24","3":"1971-10-11"},{"1":"1997-02-10","2":"1997-02-10","3":"2062-01-31"},{"1":"1997-03-03","2":"1997-03-31","3":"1975-12-04"},{"1":"1997-03-12","2":"1997-03-22","3":"2051-07-02"},{"1":"1997-03-21","2":"1997-03-29","3":"2055-02-06"},{"1":"1997-04-07","2":"1997-04-07","3":"2067-11-15"},{"1":"1997-04-22","2":"1997-04-26","3":"1976-09-01"},{"1":"1997-04-30","2":"1997-05-04","3":"1978-10-15"},{"1":"1997-05-23","2":"1997-05-23","3":"2054-10-30"},{"1":"1997-06-03","2":"1997-06-07","3":"2059-11-28"},{"1":"1997-06-18","2":"1997-06-27","3":"2066-01-30"},{"1":"1997-07-14","2":"1997-07-14","3":"1978-05-19"},{"1":"1997-08-07","2":"1997-08-10","3":"2043-02-20"},{"1":"1997-08-18","2":"1997-08-30","3":"2048-05-19"},{"1":"1997-09-04","2":"1997-09-06","3":"2045-04-10"},{"1":"1997-09-24","2":"1997-09-26","3":"2052-11-29"},{"1":"1997-10-20","2":"1997-10-20","3":"2058-10-20"},{"1":"1997-10-31","2":"1997-10-31","3":"2060-01-06"},{"1":"1997-11-26","2":"1997-11-26","3":"1972-11-27"},{"1":"1997-12-31","2":"1997-12-31","3":"1971-08-06"},{"1":"1998-01-30","2":"1998-01-30","3":"1978-10-21"},{"1":"1998-02-12","2":"1998-02-14","3":"1979-10-10"},{"1":"1998-02-27","2":"1998-03-07","3":"2057-04-06"},{"1":"1998-03-13","2":"1998-04-04","3":"1971-03-03"},{"1":"1998-03-31","2":"1998-03-31","3":"1978-02-25"},{"1":"1998-04-23","2":"1998-04-24","3":"2046-09-19"},{"1":"1998-05-01","2":"1998-05-23","3":"1975-04-18"},{"1":"1998-05-26","2":"1998-05-30","3":"2064-06-05"},{"1":"1998-06-09","2":"1998-06-27","3":"1975-02-13"},{"1":"1998-06-18","2":"1998-06-20","3":"2056-11-26"},{"1":"1998-07-13","2":"1998-08-01","3":"2024-05-21"},{"1":"1998-07-31","2":"1998-07-31","3":"2027-03-18"},{"1":"1998-08-13","2":"1998-08-13","3":"2041-05-28"},{"1":"1998-09-15","2":"1998-09-26","3":"1969-09-20"},{"1":"1998-10-02","2":"1998-10-02","3":"2043-02-26"},{"1":"1998-10-14","2":"1998-10-23","3":"1980-03-07"},{"1":"1998-11-09","2":"1998-11-09","3":"1980-05-28"},{"1":"1998-11-12","2":"1998-11-28","3":"1978-09-14"},{"1":"1998-12-02","2":"1998-12-05","3":"2055-02-18"},{"1":"1998-12-14","2":"1998-12-14","3":"2060-09-20"},{"1":"1998-12-23","2":"1998-12-23","3":"1974-05-20"},{"1":"1999-01-22","2":"1999-01-31","3":"2031-07-19"},{"1":"1999-02-05","2":"1999-02-06","3":"2059-12-20"},{"1":"1996-10-29","2":"1996-11-09","3":"2068-02-25"},{"1":"1996-11-12","2":"1996-11-12","3":"2044-04-24"},{"1":"1996-11-19","2":"1996-11-27","3":"1970-03-10"},{"1":"1996-12-02","2":"1996-12-07","3":"2057-05-18"},{"1":"1996-12-09","2":"1996-12-14","3":"1972-12-23"},{"1":"1996-12-26","2":"1996-12-26","3":"1971-11-19"},{"1":"1997-01-08","2":"1997-01-24","3":"1971-12-08"},{"1":"1997-02-10","2":"1997-02-10","3":"1976-09-05"},{"1":"1997-03-03","2":"1997-03-31","3":"1977-03-20"},{"1":"1997-03-12","2":"1997-03-22","3":"2053-07-22"},{"1":"1997-03-21","2":"1997-03-29","3":"2063-04-13"},{"1":"1997-04-07","2":"1997-04-07","3":"1973-04-26"},{"1":"1997-04-22","2":"1997-04-26","3":"1980-04-23"},{"1":"1997-04-30","2":"1997-05-04","3":"1977-02-01"},{"1":"1997-05-23","2":"1997-05-23","3":"2059-06-25"},{"1":"1997-06-03","2":"1997-06-07","3":"2058-03-02"},{"1":"1997-06-18","2":"1997-06-27","3":"1976-04-14"},{"1":"1997-07-14","2":"1997-07-14","3":"1978-04-17"},{"1":"1997-08-07","2":"1997-08-10","3":"2047-11-16"},{"1":"1997-08-18","2":"1997-08-30","3":"2053-06-23"},{"1":"1997-09-04","2":"1997-09-06","3":"2054-09-10"},{"1":"1997-09-24","2":"1997-09-26","3":"2052-10-01"},{"1":"1997-10-20","2":"1997-10-20","3":"1970-05-21"},{"1":"1997-10-31","2":"1997-10-31","3":"2059-03-29"},{"1":"1997-11-26","2":"1997-11-26","3":"1977-02-21"},{"1":"1997-12-31","2":"1997-12-31","3":"2062-09-27"},{"1":"1998-01-30","2":"1998-01-30","3":"1978-08-06"},{"1":"1998-02-12","2":"1998-02-14","3":"1980-06-29"},{"1":"1998-02-27","2":"1998-03-07","3":"2055-12-03"},{"1":"1998-03-13","2":"1998-04-04","3":"1969-10-29"},{"1":"1998-03-31","2":"1998-03-31","3":"1979-11-10"},{"1":"1998-04-23","2":"1998-04-24","3":"2055-04-08"},{"1":"1998-05-01","2":"1998-05-23","3":"1977-03-09"},{"1":"1998-05-26","2":"1998-05-30","3":"2055-07-17"},{"1":"1998-06-09","2":"1998-06-27","3":"1979-03-18"},{"1":"1998-06-18","2":"1998-06-20","3":"2058-08-21"},{"1":"1998-07-13","2":"1998-08-01","3":"2030-08-03"},{"1":"1998-07-31","2":"1998-07-31","3":"2025-10-29"},{"1":"1998-08-13","2":"1998-08-13","3":"2044-02-28"},{"1":"1998-09-15","2":"1998-09-26","3":"1976-02-13"},{"1":"1998-10-02","2":"1998-10-02","3":"2048-09-17"},{"1":"1998-10-14","2":"1998-10-23","3":"1982-07-20"},{"1":"1998-11-09","2":"1998-11-09","3":"1980-08-03"},{"1":"1998-11-12","2":"1998-11-28","3":"1977-09-12"},{"1":"1998-12-02","2":"1998-12-05","3":"2067-06-08"},{"1":"1998-12-14","2":"1998-12-14","3":"2061-06-24"},{"1":"1998-12-23","2":"1998-12-23","3":"1976-01-21"},{"1":"1999-01-22","2":"1999-01-31","3":"2028-05-26"},{"1":"1999-02-05","2":"1999-02-06","3":"1972-08-31"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[98]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -244,14 +264,13 @@ $ dob          [3m[38;5;246m&lt;fct&gt;[39m[23m 4/11/64, 8/6/64, 2/20/62, 5/
 <h3>Figure 5.5</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDEgPC0gYyhcIjE5MDAuNDVcIiwgXCIkMTkwMC40NVwiLCBcIjEsOTAwLjQ1XCIsIFwibmVhcmx5ICQyMDAwXCIpIFxueDIgPC0gYXMuZmFjdG9yKHgxKVxucmVhZHI6OnBhcnNlIG51bWJlcih4MSlcblxuYGBgIn0= -->
-<pre class="r"><code>x1 &lt;- c(&quot;1900.45&quot;, &quot;$1900.45&quot;, &quot;1,900.45&quot;, &quot;nearly $2000&quot;) 
-x2 &lt;- as.factor(x1)
-readr::parse number(x1)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKHgyKSBcblxuYGBgIn0= -->
+<pre class="r"><code>as.factor(x2) 
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6IHVuZXhwZWN0ZWQgc3ltYm9sIGluIFwicmVhZHI6OnBhcnNlIG51bWJlclwiXG4ifQ== -->
-<pre><code>Error: unexpected symbol in &quot;readr::parse number&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE5MDAuNDUgICAgICAkMTkwMC40NSAgICAgMSw5MDAuNDUgICAgIG5lYXJseSAkMjAwMFxuTGV2ZWxzOiAkMTkwMC40NSAxLDkwMC40NSAxOTAwLjQ1IG5lYXJseSAkMjAwMFxuIn0= -->
+<pre><code>[1] 1900.45      $1900.45     1,900.45     nearly $2000
+Levels: $1900.45 1,900.45 1900.45 nearly $2000</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -260,11 +279,17 @@ readr::parse number(x1)
 <h3>Figure 5.6</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFiIDwtIHh0YWJsZShkczEpIFxuYGBgIn0= -->
-<pre class="r"><code>tab &lt;- xtable(ds1) </code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXhlcjVfNyA8LSBcbiAgdGliYmxlKFxuICBncnAgPSBjKFwiQVwiLCBcIkFcIiwgXCJCXCIsIFwiQlwiKSwgXG4gIHNleCA9IGMoXCJGXCIsIFwiTVwiLCBcIkZcIiwgXCJNXCIpLCBcbiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpXG4gIClcbnRhYiA8LSB4dGFibGUoZHMxKSBcbmBgYCJ9 -->
+<pre class="r"><code>Exer5_7 &lt;- 
+  tibble(
+  grp = c(&quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;), 
+  sex = c(&quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;), 
+  meanL = c(0.22, 0.47, 0.33, 0.55)
+  )
+tab &lt;- xtable(ds1) </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4geHRhYmxlKGRzMSkgOiBjb3VsZCBub3QgZmluZCBmdW5jdGlvbiBcInh0YWJsZVwiXG4ifQ== -->
-<pre><code>Error in xtable(ds1) : could not find function &quot;xtable&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4geHRhYmxlKGRzMSkgOiBvYmplY3QgJ2RzMScgbm90IGZvdW5kXG4ifQ== -->
+<pre><code>Error in xtable(ds1) : object 'ds1' not found</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -273,14 +298,13 @@ readr::parse number(x1)
 <h3>Figure 5.7</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXhlcjVfNyA8LSBcbiAgdGliYmxlKFxuICBncnAgPSBjKFwiQVwiLCBcIkFcIiwgXCJCXCIsIFwiQlwiKSwgXG4gIHNleCA9IGMoXCJGXCIsIFwiTVwiLCBcIkZcIiwgXCJNXCIpLCBcbiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpXG4gIClcbmBgYCJ9 -->
-<pre class="r"><code>Exer5_7 &lt;- 
-  tibble(
-  grp = c(&quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;), 
-  sex = c(&quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;), 
-  meanL = c(0.22, 0.47, 0.33, 0.55)
-  )</code></pre>
-<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NiwibnJvdyI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERpaXVCaVlHQmdZbUJtWldSZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0JqTFlnRmdBSkF1VGNNUmdPQ0VZYUdyZFlBeGZMQ0lNREh3Z3RmWjdOTDRlNm8vUnRMOHF0eVB3ZGFzOG5ILzVPcGR0d2VMcmNIVmJxaDY2cnhPcGhxdmIrTG9WeUhwamZ4RW9XdlhRQTgxdTF0elV4THdnWWprd082NENiZGI0ZXRqK0VjaG1MbHY3bXpOQllKYjlrek1nY0JZdGtEaUw4c3YxOGhKelU0dUJIRjVRYURZQWlmLy8vLzlCVThnS1V5UUFEbEdJSUhONlVRR01XWnhhQVdlbStDQ1lRWEMxQlVYSUx2WkJ0eUE1SjdFWVpnRk1rQ3Nsc1NSUkw2MElhRGVROXc5TkMzdCtRVWxtZmg1UUV4TW9ubG5STkRNV29Ra0lsT2FCZkpHaW01eFJtcGV0YTJ3Q3NnRXNEd0c4VURZTEVwc05ZaWZ6ZjZoWnJGQ3oyRkx6MGpQelVtR096MGxNU3MyQmN2aUFZUW9PTGIyQ29zeThFcGhYZ0tMRmVpWDVKWWt3ZFZ6SitUa3dFYkRuR1A0QkFGNU1ka3JXQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["grp"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sex"],"name":[2],"type":["chr"],"align":["left"]},{"label":["sdL"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sdR"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["gpr"],"name":[5],"type":["chr"],"align":["left"]},{"label":["meanL"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"F","3":"0.11","4":"0.08","5":"meanR","6":"0.34"},{"1":"A","2":"M","3":"0.33","4":"0.33","5":"meanR","6":"0.57"},{"1":"B","2":"F","3":"0.11","4":"0.07","5":"meanR","6":"0.40"},{"1":"B","2":"M","3":"0.31","4":"0.27","5":"meanR","6":"0.65"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -288,6 +312,12 @@ readr::parse number(x1)
 <h3>Figure 5.8</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHBseXI6OmRvKEhFTFByY3QpXG5gYGAifQ== -->
+<pre class="r"><code>dplyr::do(HELPrct)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gYXJnc1tbMV1dIDogc3Vic2NyaXB0IG91dCBvZiBib3VuZHNcbiJ9 -->
+<pre><code>Error in args[[1]] : subscript out of bounds</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -295,11 +325,11 @@ readr::parse number(x1)
 <h3>Figure 5.12</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudXJsIDwtIFwiaHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NaWxlX3J1bl93b3JsZF9yZWNvcmRfcHJvZ3Jlc3Npb25cIlxudGFibGVzIDwtIHVybCAlPiVcbiAgcmVhZF9odG1sKCkgJT4lXG4gIGh0bWxfbm9kZXMoXCJ0YWJsZVwiKVxuYGBgIn0= -->
-<pre class="r"><code>url &lt;- &quot;http://en.wikipedia.org/wiki/Mile_run_world_record_progression&quot;
-tables &lt;- url %&gt;%
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGVzIDwtIHVybCAlPiVcbiAgcmVhZF9odG1sKCkgJT4lXG4gIGh0bWxfbm9kZXMoXCJ0YWJsZVwiKVxuXG5gYGAifQ== -->
+<pre class="r"><code>tables &lt;- url %&gt;%
   read_html() %&gt;%
-  html_nodes(&quot;table&quot;)</code></pre>
+  html_nodes(&quot;table&quot;)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gcmVhZF9odG1sKC4pIDogY291bGQgbm90IGZpbmQgZnVuY3Rpb24gXCJyZWFkX2h0bWxcIlxuIn0= -->
 <pre><code>Error in read_html(.) : could not find function &quot;read_html&quot;</code></pre>
@@ -308,7 +338,7 @@ tables &lt;- url %&gt;%
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAzODAgSG9tZXdvcmsgRXhlcmNpc2VzIgpzdWJ0aXRsZTogIk1EU1IgQ2hhcHRlciAwNSIKYXV0aG9yOiAiRGFuaWVsIExlZSIKZGF0ZTogIkR1ZTogMjcvMDEvMjAxOSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQogIAojIEZyb250IG1hdHRlcgogIApgYGB7cn0KIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgbG9hZCBhbGwgcGFja2FnZXMgaGVyZQpsaWJyYXJ5KG1vc2FpYykKbGlicmFyeShMYWhtYW4pCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShtZHNyKQpsaWJyYXJ5KEhtaXNjKQpsaWJyYXJ5KHJlYWRyKQpsaWJyYXJ5KCkKYGBgCgoKIyBFeGVyY2lzZXMKCiMjIyBGaWd1cmUgNS4yCmBgYHtyfQp0ZWFtSUQgJT4lCiAgY291bnRfc2Vhc29ucygpCmBgYAoKIyMjIEZpZ3VyZSA1LjMKYGBge3J9CmJrX3RlYW1zIDwtIGMoIkJSMSIsICJCUjIiLCAiQlIzIiwgIkJSNCIsICJCUk8iLCAiQlJQIiwgIkJSRiIpCmBgYAoKIyMjIEZpZ3VyZSA1LjQKYGBge3J9Ck1hcnJpYWdlICU+JQogIHNlbGVjdChhcHBkYXRlLCBjZXJlbW9ueWRhdGUsIGRvYikgJT4lCiAgZ2xpbXBzZSgpCmBgYAoKIyMjIEZpZ3VyZSA1LjUKYGBge3J9Cgp4MSA8LSBjKCIxOTAwLjQ1IiwgIiQxOTAwLjQ1IiwgIjEsOTAwLjQ1IiwgIm5lYXJseSAkMjAwMCIpIAp4MiA8LSBhcy5mYWN0b3IoeDEpCnBhcnNlIG51bWJlcih4MSkKcGFyc2UgbnVtYmVyKHgyKSAKYGBgCgojIyMgRmlndXJlIDUuNgpgYGB7cn0KdGFiIDwtIHh0YWJsZShkczEpIApwcmludCh0YWIsIGZsb2F0aW5nPUZBTFNFKQoKVHJlYXQgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJUIikgQ29udHJvbCA8LSBmaWx0ZXIoZHMxLCBncm91cD09IkMiKSBhbGwgPC0gbXV0YXRlKFRyZWF0LCBkaWZmID0gVHJlYXQkdmFscyAtIENvbnRyb2wkdmFscykgYWxsCgpgYGAKCiMjIyBGaWd1cmUgNS43CmBgYHtyfQpFeGVyNV83IDwtIAogIHRpYmJsZSgKICBncnAgPSBjKCJBIiwgIkEiLCAiQiIsICJCIiksIAogIHNleCA9IGMoIkYiLCAiTSIsICJGIiwgIk0iKSwgCiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpCiAgKQpgYGAKCiMjIyBGaWd1cmUgNS44CmBgYHtyfQoKYGBgCgojIyMgRmlndXJlIDUuMTIKYGBge3J9CnVybCA8LSAiaHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NaWxlX3J1bl93b3JsZF9yZWNvcmRfcHJvZ3Jlc3Npb24iCnRhYmxlcyA8LSB1cmwgJT4lCiAgcmVhZF9odG1sKCkgJT4lCiAgaHRtbF9ub2RlcygidGFibGUiKQpsZW5ndGgodGFibGVzKQoKVGFibGUzIDwtIGh0bWxfdGFibGUodGFibGVzW1szXV0pCmhlYWQoVGFibGUzKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAzODAgSG9tZXdvcmsgRXhlcmNpc2VzIgpzdWJ0aXRsZTogIk1EU1IgQ2hhcHRlciAwNSIKYXV0aG9yOiAiRGFuaWVsIExlZSIKZGF0ZTogIkR1ZTogMjcvMDEvMjAxOSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQogIAojIEZyb250IG1hdHRlcgogIApgYGB7cn0KIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgbG9hZCBhbGwgcGFja2FnZXMgaGVyZQpsaWJyYXJ5KG1vc2FpYykKbGlicmFyeShMYWhtYW4pCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShtZHNyKQpsaWJyYXJ5KEhtaXNjKQpsaWJyYXJ5KHJlYWRyKQpoZWFkKFRlYW1zKQphdHRhY2goVGVhbXMpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkocGx5cikKbGlicmFyeSh4dGFibGUpCmxpYnJhcnkobW9zYWljRGF0YSkKbGlicmFyeSh0aWR5cikKYGBgCgoKIyBFeGVyY2lzZXMKCiMjIyBGaWd1cmUgNS4yCmBgYHtyfQpjb3VudF9zZWFzb25zIDwtIGZ1bmN0aW9uKHRlYW1uYW1lKXsKICBUZWFtcyAlPiUKICAgIHN1YnNldChUZWFtcywgdGVhbUlEID09IHRlYW1uYW1lKSAlPiUKICAgIGNvdW50KFRlYW1zLCB0ZWFtSUQpfQoKYGBgCgojIyMgRmlndXJlIDUuMwpgYGB7cn0KYmtfdGVhbXMgPC0gCiAgYygiQlIxIiwgIkJSMiIsICJCUjMiLCAiQlI0IiwgIkJSTyIsICJCUlAiLCAiQlJGIikKYmtfdGVhbXMxIDwtIAogIHNhcHBseShGVU4gPSBia190ZWFtcykKYGBgCgojIyMgRmlndXJlIDUuNApgYGB7cn0KTWFycmlhZ2UgJT4lCiAgc2VsZWN0KGFwcGRhdGUsIGNlcmVtb255ZGF0ZSwgZG9iKSAlPiUKICBnbGltcHNlKCkKCk1hcnJpYWdlICU+JQogIG11dGF0ZShhcHBkYXRlID0gbWR5KGFwcGRhdGUpLCBjZXJlbW9ueWRhdGUgPSBtZHkoY2VyZW1vbnlkYXRlKSwgZG9iID0gbWR5KGRvYikpICU+JQogIHNlbGVjdChhcHBkYXRlLCBjZXJlbW9ueWRhdGUsIGRvYikKYGBgCgojIyMgRmlndXJlIDUuNQpgYGB7cn0KCngxIDwtIGMoIjE5MDAuNDUiLCAiJDE5MDAuNDUiLCAiMSw5MDAuNDUiLCAibmVhcmx5ICQyMDAwIikgCngyIDwtIGFzLmZhY3Rvcih4MSkKcGFyc2VfbnVtYmVyKHgxKQphcy5mYWN0b3IoeDIpIApgYGAKCgojIyMgRmlndXJlIDUuNgpgYGB7cn0KdGFiIDwtIHh0YWJsZShkczEpIApwcmludCh0YWIsIGZsb2F0aW5nPUZBTFNFKQoKVHJlYXQgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJUIikgCkNvbnRyb2wgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJDIikgCmFsbCA8LSBtdXRhdGUoVHJlYXQsIGRpZmYgPSBUcmVhdCR2YWxzIC0gQ29udHJvbCR2YWxzKSAKYWxsCgpkczEKYGBgCgojIyMgRmlndXJlIDUuNwpgYGB7cn0KZGF0YV9sb25nIDwtIAogIHRpYmJsZSgKICBncnAgPSBjKCJBIiwgIkEiLCAiQiIsICJCIiksIAogIHNleCA9IGMoIkYiLCAiTSIsICJGIiwgIk0iKSwgCiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpLAogIHNkTCA9IGMoMC4xMSwgMC4zMywgMC4xMSwgMC4zMSksCiAgbWVhblIgPSBjKDAuMzQsIDAuNTcsIDAuNDAsIDAuNjUpLAogIHNkUiA9IGMoMC4wOCwgMC4zMywgMC4wNywgMC4yNykKICApCgpkYXRhX2xvbmcKCmRhdGF3aWRlIDwtCiAgZGF0YV9sb25nICU+JQogIGdhdGhlcihncHIsIG1lYW5MLCBzcHJlYWQoc2V4KSkKCmRhdGF3aWRlCmBgYAoKIyMjIEZpZ3VyZSA1LjgKYGBge3J9CmRwbHlyOjpkbyhIRUxQcmN0KQoKYGBgCgojIyMgRmlndXJlIDUuMTIKYGBge3J9CnVybCA8LSAiaHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NaWxlX3J1bl93b3JsZF9yZWNvcmRfcHJvZ3Jlc3Npb24iCnRhYmxlcyA8LSB1cmwgJT4lCiAgcmVhZF9odG1sKCkgJT4lCiAgaHRtbF9ub2RlcygidGFibGUiKQpsZW5ndGgodGFibGVzKQoKVGFibGUzIDwtIGh0bWxfdGFibGUodGFibGVzW1szXV0pCmhlYWQoVGFibGUzKQpgYGAK</div>
 
 
 
