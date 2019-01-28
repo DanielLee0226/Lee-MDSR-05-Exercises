@@ -19,7 +19,8 @@ library(tidyverse)
 library(lubridate)
 library(mdsr)
 library(Hmisc)
-
+library(readr)
+library()
 ```
 
 
@@ -27,32 +28,48 @@ library(Hmisc)
 
 ### Figure 5.2
 ```{r}
-
+teamID %>%
+  count_seasons()
 ```
 
 ### Figure 5.3
 ```{r}
-
+bk_teams <- c("BR1", "BR2", "BR3", "BR4", "BRO", "BRP", "BRF")
 ```
 
 ### Figure 5.4
 ```{r}
-
+Marriage %>%
+  select(appdate, ceremonydate, dob) %>%
+  glimpse()
 ```
 
 ### Figure 5.5
 ```{r}
 
+x1 <- c("1900.45", "$1900.45", "1,900.45", "nearly $2000") 
+x2 <- as.factor(x1)
+parse number(x1)
+parse number(x2) 
 ```
 
 ### Figure 5.6
 ```{r}
+tab <- xtable(ds1) 
+print(tab, floating=FALSE)
+
+Treat <- filter(ds1, group=="T") Control <- filter(ds1, group=="C") all <- mutate(Treat, diff = Treat$vals - Control$vals) all
 
 ```
 
 ### Figure 5.7
 ```{r}
-
+Exer5_7 <- 
+  tibble(
+  grp = c("A", "A", "B", "B"), 
+  sex = c("F", "M", "F", "M"), 
+  meanL = c(0.22, 0.47, 0.33, 0.55)
+  )
 ```
 
 ### Figure 5.8
@@ -62,5 +79,12 @@ library(Hmisc)
 
 ### Figure 5.12
 ```{r}
+url <- "http://en.wikipedia.org/wiki/Mile_run_world_record_progression"
+tables <- url %>%
+  read_html() %>%
+  html_nodes("table")
+length(tables)
 
+Table3 <- html_table(tables[[3]])
+head(Table3)
 ```

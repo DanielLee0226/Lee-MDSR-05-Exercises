@@ -184,123 +184,17 @@ $(document).ready(function () {
 <h1>Front matter</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudFxucm0obGlzdCA9IGxzKCkpXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmVcbmxpYnJhcnkobW9zYWljKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudFxucm0obGlzdCA9IGxzKCkpXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmVcbmxpYnJhcnkobW9zYWljKVxubGlicmFyeShMYWhtYW4pXG5saWJyYXJ5KHRpZHl2ZXJzZSlcbmxpYnJhcnkobHVicmlkYXRlKVxubGlicmFyeShtZHNyKVxubGlicmFyeShIbWlzYylcbmBgYCJ9 -->
 <pre class="r"><code># always clean up R environment
 rm(list = ls())
 # load all packages here
-library(mosaic)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBkcGx5clxuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGxhdHRpY2VcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dmb3JtdWxhXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGdncGxvdDJcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZ2dzdGFuY2VcblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmGdnc3RhbmNl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpnZ3Bsb3Qy4oCZOlxuXG4gICAgZ2VvbV9lcnJvcmJhcmgsIEdlb21FcnJvcmJhcmhcblxuXG5OZXcgdG8gZ2dmb3JtdWxhPyAgVHJ5IHRoZSB0dXRvcmlhbHM6IFxuXHRsZWFybnI6OnJ1bl90dXRvcmlhbChcImludHJvZHVjdGlvblwiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcblx0bGVhcm5yOjpydW5fdHV0b3JpYWwoXCJyZWZpbmluZ1wiLCBwYWNrYWdlID0gXCJnZ2Zvcm11bGFcIilcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogbW9zYWljRGF0YVxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBNYXRyaXhcblxuVGhlICdtb3NhaWMnIHBhY2thZ2UgbWFza3Mgc2V2ZXJhbCBmdW5jdGlvbnMgZnJvbSBjb3JlIHBhY2thZ2VzIGluIG9yZGVyIHRvIGFkZCBcbmFkZGl0aW9uYWwgZmVhdHVyZXMuICBUaGUgb3JpZ2luYWwgYmVoYXZpb3Igb2YgdGhlc2UgZnVuY3Rpb25zIHNob3VsZCBub3QgYmUgYWZmZWN0ZWQgYnkgdGhpcy5cblxuTm90ZTogSWYgeW91IHVzZSB0aGUgTWF0cml4IHBhY2thZ2UsIGJlIHN1cmUgdG8gbG9hZCBpdCBCRUZPUkUgbG9hZGluZyBtb3NhaWMuXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhtb3NhaWPigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpNYXRyaXjigJk6XG5cbiAgICBtZWFuXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6Z2dwbG90MuKAmTpcblxuICAgIHN0YXRcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmRwbHly4oCZOlxuXG4gICAgY291bnQsIGRvLCB0YWxseVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6c3RhdHPigJk6XG5cbiAgICBiaW5vbS50ZXN0LCBjb3IsIGNvci50ZXN0LCBjb3YsIGZpdmVudW0sIElRUiwgbWVkaWFuLCBwcm9wLnRlc3QsIHF1YW50aWxlLCBzZCxcbiAgICB0LnRlc3QsIHZhclxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIG1heCwgbWVhbiwgbWluLCBwcm9kLCByYW5nZSwgc2FtcGxlLCBzdW1cbiJ9 -->
-<pre><code>Loading required package: dplyr
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Loading required package: lattice
-Loading required package: ggformula
-Loading required package: ggplot2
-Loading required package: ggstance
-
-Attaching package: ‘ggstance’
-
-The following objects are masked from ‘package:ggplot2’:
-
-    geom_errorbarh, GeomErrorbarh
-
-
-New to ggformula?  Try the tutorials: 
-    learnr::run_tutorial(&quot;introduction&quot;, package = &quot;ggformula&quot;)
-    learnr::run_tutorial(&quot;refining&quot;, package = &quot;ggformula&quot;)
-Loading required package: mosaicData
-Loading required package: Matrix
-
-The 'mosaic' package masks several functions from core packages in order to add 
-additional features.  The original behavior of these functions should not be affected by this.
-
-Note: If you use the Matrix package, be sure to load it BEFORE loading mosaic.
-
-Attaching package: ‘mosaic’
-
-The following object is masked from ‘package:Matrix’:
-
-    mean
-
-The following object is masked from ‘package:ggplot2’:
-
-    stat
-
-The following objects are masked from ‘package:dplyr’:
-
-    count, do, tally
-
-The following objects are masked from ‘package:stats’:
-
-    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test, quantile, sd,
-    t.test, var
-
-The following objects are masked from ‘package:base’:
-
-    max, mean, min, prod, range, sample, sum</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShMYWhtYW4pXG5saWJyYXJ5KHRpZHl2ZXJzZSlcbmBgYCJ9 -->
-<pre class="r"><code>library(Lahman)
-library(tidyverse)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXHUwMDFiWzMwbeKUgOKUgCBcdTAwMWJbMW1BdHRhY2hpbmcgcGFja2FnZXNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2UgMS4yLjEg4pSA4pSAXHUwMDFiWzM5bVxuXHUwMDFiWzMwbVx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG10aWJibGUgXHUwMDFiWzMwbSAyLjAuMCAgICAgXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXB1cnJyICBcdTAwMWJbMzBtIDAuMi41XG5cdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtdGlkeXIgIFx1MDAxYlszMG0gMC44LjIgICAgIFx1MDAxYlszMm3inJRcdTAwMWJbMzBtIFx1MDAxYlszNG1zdHJpbmdyXHUwMDFiWzMwbSAxLjMuMVxuXHUwMDFiWzMybeKclFx1MDAxYlszMG0gXHUwMDFiWzM0bXJlYWRyICBcdTAwMWJbMzBtIDEuMy4xICAgICBcdTAwMWJbMzJt4pyUXHUwMDFiWzMwbSBcdTAwMWJbMzRtZm9yY2F0c1x1MDAxYlszMG0gMC4zLjBcdTAwMWJbMzltXG5wYWNrYWdlIOKAmHRpYmJsZeKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDMuNS4yXHUwMDFiWzMwbeKUgOKUgCBcdTAwMWJbMW1Db25mbGljdHNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG5cdTAwMWJbMzFt4pyWXHUwMDFiWzMwbSBcdTAwMWJbMzRtbW9zYWljXHUwMDFiWzMwbTo6XHUwMDFiWzMybWNvdW50KClcdTAwMWJbMzBtIG1hc2tzIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06OmNvdW50KClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1wdXJyclx1MDAxYlszMG06Olx1MDAxYlszMm1jcm9zcygpXHUwMDFiWzMwbSAgbWFza3MgXHUwMDFiWzM0bW1vc2FpY1x1MDAxYlszMG06OmNyb3NzKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtZG8oKVx1MDAxYlszMG0gICAgbWFza3MgXHUwMDFiWzM0bWRwbHlyXHUwMDFiWzMwbTo6ZG8oKVxuXHUwMDFiWzMxbeKcllx1MDAxYlszMG0gXHUwMDFiWzM0bXRpZHlyXHUwMDFiWzMwbTo6XHUwMDFiWzMybWV4cGFuZCgpXHUwMDFiWzMwbSBtYXNrcyBcdTAwMWJbMzRtTWF0cml4XHUwMDFiWzMwbTo6ZXhwYW5kKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06Olx1MDAxYlszMm1maWx0ZXIoKVx1MDAxYlszMG0gbWFza3MgXHUwMDFiWzM0bXN0YXRzXHUwMDFiWzMwbTo6ZmlsdGVyKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1kcGx5clx1MDAxYlszMG06Olx1MDAxYlszMm1sYWcoKVx1MDAxYlszMG0gICAgbWFza3MgXHUwMDFiWzM0bXN0YXRzXHUwMDFiWzMwbTo6bGFnKClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtc3RhdCgpXHUwMDFiWzMwbSAgbWFza3MgXHUwMDFiWzM0bWdncGxvdDJcdTAwMWJbMzBtOjpzdGF0KClcblx1MDAxYlszMW3inJZcdTAwMWJbMzBtIFx1MDAxYlszNG1tb3NhaWNcdTAwMWJbMzBtOjpcdTAwMWJbMzJtdGFsbHkoKVx1MDAxYlszMG0gbWFza3MgXHUwMDFiWzM0bWRwbHlyXHUwMDFiWzMwbTo6dGFsbHkoKVx1MDAxYlszOW1cbiJ9 -->
-<pre><code>[30m── [1mAttaching packages[22m ──────────────────────────────────────────────────── tidyverse 1.2.1 ──[39m
-[30m[32m✔[30m [34mtibble [30m 2.0.0     [32m✔[30m [34mpurrr  [30m 0.2.5
-[32m✔[30m [34mtidyr  [30m 0.8.2     [32m✔[30m [34mstringr[30m 1.3.1
-[32m✔[30m [34mreadr  [30m 1.3.1     [32m✔[30m [34mforcats[30m 0.3.0[39m
-package ‘tibble’ was built under R version 3.5.2[30m── [1mConflicts[22m ─────────────────────────────────────────────────────── tidyverse_conflicts() ──
-[31m✖[30m [34mmosaic[30m::[32mcount()[30m masks [34mdplyr[30m::count()
-[31m✖[30m [34mpurrr[30m::[32mcross()[30m  masks [34mmosaic[30m::cross()
-[31m✖[30m [34mmosaic[30m::[32mdo()[30m    masks [34mdplyr[30m::do()
-[31m✖[30m [34mtidyr[30m::[32mexpand()[30m masks [34mMatrix[30m::expand()
-[31m✖[30m [34mdplyr[30m::[32mfilter()[30m masks [34mstats[30m::filter()
-[31m✖[30m [34mdplyr[30m::[32mlag()[30m    masks [34mstats[30m::lag()
-[31m✖[30m [34mmosaic[30m::[32mstat()[30m  masks [34mggplot2[30m::stat()
-[31m✖[30m [34mmosaic[30m::[32mtally()[30m masks [34mdplyr[30m::tally()[39m</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpXG5gYGAifQ== -->
-<pre class="r"><code>library(lubridate)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
-<pre><code>
-Attaching package: ‘lubridate’
-
-The following object is masked from ‘package:base’:
-
-    date</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShtZHNyKVxubGlicmFyeShIbWlzYylcbmBgYCJ9 -->
-<pre class="r"><code>library(mdsr)
+library(mosaic)
+library(Lahman)
+library(tidyverse)
+library(lubridate)
+library(mdsr)
 library(Hmisc)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBzdXJ2aXZhbFxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBGb3JtdWxhXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhIbWlzY+KAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6ZHBseXLigJk6XG5cbiAgICBzcmMsIHN1bW1hcml6ZVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOkxhaG1hbuKAmTpcblxuICAgIExhYmVsXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgZm9ybWF0LnB2YWwsIHVuaXRzXG4ifQ== -->
-<pre><code>Loading required package: survival
-Loading required package: Formula
-
-Attaching package: ‘Hmisc’
-
-The following objects are masked from ‘package:dplyr’:
-
-    src, summarize
-
-The following object is masked from ‘package:Lahman’:
-
-    Label
-
-The following objects are masked from ‘package:base’:
-
-    format.pval, units</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -310,6 +204,10 @@ The following objects are masked from ‘package:base’:
 <h3>Figure 5.2</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVhbUlEICU+JVxuICBjb3VudF9zZWFzb25zKClcbmBgYCJ9 -->
+<pre class="r"><code>teamID %&gt;%
+  count_seasons()</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -317,6 +215,9 @@ The following objects are masked from ‘package:base’:
 <h3>Figure 5.3</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmtfdGVhbXMgPC0gYyhcIkJSMVwiLCBcIkJSMlwiLCBcIkJSM1wiLCBcIkJSNFwiLCBcIkJST1wiLCBcIkJSUFwiLCBcIkJSRlwiKVxuYGBgIn0= -->
+<pre class="r"><code>bk_teams &lt;- c(&quot;BR1&quot;, &quot;BR2&quot;, &quot;BR3&quot;, &quot;BR4&quot;, &quot;BRO&quot;, &quot;BRP&quot;, &quot;BRF&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -324,6 +225,18 @@ The following objects are masked from ‘package:base’:
 <h3>Figure 5.4</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTWFycmlhZ2UgJT4lXG4gIHNlbGVjdChhcHBkYXRlLCBjZXJlbW9ueWRhdGUsIGRvYikgJT4lXG4gIGdsaW1wc2UoKVxuYGBgIn0= -->
+<pre class="r"><code>Marriage %&gt;%
+  select(appdate, ceremonydate, dob) %&gt;%
+  glimpse()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiT2JzZXJ2YXRpb25zOiA5OFxuVmFyaWFibGVzOiAzXG4kIGFwcGRhdGUgICAgICBcdTAwMWJbM21cdTAwMWJbMzg7NTsyNDZtPGZjdD5cdTAwMWJbMzltXHUwMDFiWzIzbSAxMC8yOS85NiwgMTEvMTIvOTYsIDExLzE5Lzk2LCAxMi8yLzk2LCAxMi85Lzk2LCAxMi8yNi85NiwgMS84Lzk3LCAyLzHigKZcbiQgY2VyZW1vbnlkYXRlIFx1MDAxYlszbVx1MDAxYlszODs1OzI0Nm08ZmN0Plx1MDAxYlszOW1cdTAwMWJbMjNtIDExLzkvOTYsIDExLzEyLzk2LCAxMS8yNy85NiwgMTIvNy85NiwgMTIvMTQvOTYsIDEyLzI2Lzk2LCAxLzI0Lzk3LCAyL+KAplxuJCBkb2IgICAgICAgICAgXHUwMDFiWzNtXHUwMDFiWzM4OzU7MjQ2bTxmY3Q+XHUwMDFiWzM5bVx1MDAxYlsyM20gNC8xMS82NCwgOC82LzY0LCAyLzIwLzYyLCA1LzIwLzU2LCAxMi8xNC82NiwgMi8yMS83MCwgMTAvMTEvNzEsIDEvMzEv4oCmXG4ifQ== -->
+<pre><code>Observations: 98
+Variables: 3
+$ appdate      [3m[38;5;246m&lt;fct&gt;[39m[23m 10/29/96, 11/12/96, 11/19/96, 12/2/96, 12/9/96, 12/26/96, 1/8/97, 2/1…
+$ ceremonydate [3m[38;5;246m&lt;fct&gt;[39m[23m 11/9/96, 11/12/96, 11/27/96, 12/7/96, 12/14/96, 12/26/96, 1/24/97, 2/…
+$ dob          [3m[38;5;246m&lt;fct&gt;[39m[23m 4/11/64, 8/6/64, 2/20/62, 5/20/56, 12/14/66, 2/21/70, 10/11/71, 1/31/…</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -331,6 +244,15 @@ The following objects are masked from ‘package:base’:
 <h3>Figure 5.5</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDEgPC0gYyhcIjE5MDAuNDVcIiwgXCIkMTkwMC40NVwiLCBcIjEsOTAwLjQ1XCIsIFwibmVhcmx5ICQyMDAwXCIpIFxueDIgPC0gYXMuZmFjdG9yKHgxKVxucmVhZHI6OnBhcnNlIG51bWJlcih4MSlcblxuYGBgIn0= -->
+<pre class="r"><code>x1 &lt;- c(&quot;1900.45&quot;, &quot;$1900.45&quot;, &quot;1,900.45&quot;, &quot;nearly $2000&quot;) 
+x2 &lt;- as.factor(x1)
+readr::parse number(x1)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6IHVuZXhwZWN0ZWQgc3ltYm9sIGluIFwicmVhZHI6OnBhcnNlIG51bWJlclwiXG4ifQ== -->
+<pre><code>Error: unexpected symbol in &quot;readr::parse number&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -338,6 +260,12 @@ The following objects are masked from ‘package:base’:
 <h3>Figure 5.6</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFiIDwtIHh0YWJsZShkczEpIFxuYGBgIn0= -->
+<pre class="r"><code>tab &lt;- xtable(ds1) </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4geHRhYmxlKGRzMSkgOiBjb3VsZCBub3QgZmluZCBmdW5jdGlvbiBcInh0YWJsZVwiXG4ifQ== -->
+<pre><code>Error in xtable(ds1) : could not find function &quot;xtable&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -345,6 +273,14 @@ The following objects are masked from ‘package:base’:
 <h3>Figure 5.7</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXhlcjVfNyA8LSBcbiAgdGliYmxlKFxuICBncnAgPSBjKFwiQVwiLCBcIkFcIiwgXCJCXCIsIFwiQlwiKSwgXG4gIHNleCA9IGMoXCJGXCIsIFwiTVwiLCBcIkZcIiwgXCJNXCIpLCBcbiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpXG4gIClcbmBgYCJ9 -->
+<pre class="r"><code>Exer5_7 &lt;- 
+  tibble(
+  grp = c(&quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;), 
+  sex = c(&quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;), 
+  meanL = c(0.22, 0.47, 0.33, 0.55)
+  )</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -359,11 +295,20 @@ The following objects are masked from ‘package:base’:
 <h3>Figure 5.12</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudXJsIDwtIFwiaHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NaWxlX3J1bl93b3JsZF9yZWNvcmRfcHJvZ3Jlc3Npb25cIlxudGFibGVzIDwtIHVybCAlPiVcbiAgcmVhZF9odG1sKCkgJT4lXG4gIGh0bWxfbm9kZXMoXCJ0YWJsZVwiKVxuYGBgIn0= -->
+<pre class="r"><code>url &lt;- &quot;http://en.wikipedia.org/wiki/Mile_run_world_record_progression&quot;
+tables &lt;- url %&gt;%
+  read_html() %&gt;%
+  html_nodes(&quot;table&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gcmVhZF9odG1sKC4pIDogY291bGQgbm90IGZpbmQgZnVuY3Rpb24gXCJyZWFkX2h0bWxcIlxuIn0= -->
+<pre><code>Error in read_html(.) : could not find function &quot;read_html&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAzODAgSG9tZXdvcmsgRXhlcmNpc2VzIgpzdWJ0aXRsZTogIk1EU1IgQ2hhcHRlciAwNSIKYXV0aG9yOiAiRGFuaWVsIExlZSIKZGF0ZTogIkR1ZTogMjcvMDEvMjAxOSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQogIAojIEZyb250IG1hdHRlcgogIApgYGB7cn0KIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgbG9hZCBhbGwgcGFja2FnZXMgaGVyZQpsaWJyYXJ5KG1vc2FpYykKbGlicmFyeShMYWhtYW4pCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShtZHNyKQpsaWJyYXJ5KEhtaXNjKQoKYGBgCgoKIyBFeGVyY2lzZXMKCiMjIyBGaWd1cmUgNS4yCmBgYHtyfQoKYGBgCgojIyMgRmlndXJlIDUuMwpgYGB7cn0KCmBgYAoKIyMjIEZpZ3VyZSA1LjQKYGBge3J9CgpgYGAKCiMjIyBGaWd1cmUgNS41CmBgYHtyfQoKYGBgCgojIyMgRmlndXJlIDUuNgpgYGB7cn0KCmBgYAoKIyMjIEZpZ3VyZSA1LjcKYGBge3J9CgpgYGAKCiMjIyBGaWd1cmUgNS44CmBgYHtyfQoKYGBgCgojIyMgRmlndXJlIDUuMTIKYGBge3J9CgpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAzODAgSG9tZXdvcmsgRXhlcmNpc2VzIgpzdWJ0aXRsZTogIk1EU1IgQ2hhcHRlciAwNSIKYXV0aG9yOiAiRGFuaWVsIExlZSIKZGF0ZTogIkR1ZTogMjcvMDEvMjAxOSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQogIAojIEZyb250IG1hdHRlcgogIApgYGB7cn0KIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgbG9hZCBhbGwgcGFja2FnZXMgaGVyZQpsaWJyYXJ5KG1vc2FpYykKbGlicmFyeShMYWhtYW4pCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShtZHNyKQpsaWJyYXJ5KEhtaXNjKQpsaWJyYXJ5KHJlYWRyKQpsaWJyYXJ5KCkKYGBgCgoKIyBFeGVyY2lzZXMKCiMjIyBGaWd1cmUgNS4yCmBgYHtyfQp0ZWFtSUQgJT4lCiAgY291bnRfc2Vhc29ucygpCmBgYAoKIyMjIEZpZ3VyZSA1LjMKYGBge3J9CmJrX3RlYW1zIDwtIGMoIkJSMSIsICJCUjIiLCAiQlIzIiwgIkJSNCIsICJCUk8iLCAiQlJQIiwgIkJSRiIpCmBgYAoKIyMjIEZpZ3VyZSA1LjQKYGBge3J9Ck1hcnJpYWdlICU+JQogIHNlbGVjdChhcHBkYXRlLCBjZXJlbW9ueWRhdGUsIGRvYikgJT4lCiAgZ2xpbXBzZSgpCmBgYAoKIyMjIEZpZ3VyZSA1LjUKYGBge3J9Cgp4MSA8LSBjKCIxOTAwLjQ1IiwgIiQxOTAwLjQ1IiwgIjEsOTAwLjQ1IiwgIm5lYXJseSAkMjAwMCIpIAp4MiA8LSBhcy5mYWN0b3IoeDEpCnBhcnNlIG51bWJlcih4MSkKcGFyc2UgbnVtYmVyKHgyKSAKYGBgCgojIyMgRmlndXJlIDUuNgpgYGB7cn0KdGFiIDwtIHh0YWJsZShkczEpIApwcmludCh0YWIsIGZsb2F0aW5nPUZBTFNFKQoKVHJlYXQgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJUIikgQ29udHJvbCA8LSBmaWx0ZXIoZHMxLCBncm91cD09IkMiKSBhbGwgPC0gbXV0YXRlKFRyZWF0LCBkaWZmID0gVHJlYXQkdmFscyAtIENvbnRyb2wkdmFscykgYWxsCgpgYGAKCiMjIyBGaWd1cmUgNS43CmBgYHtyfQpFeGVyNV83IDwtIAogIHRpYmJsZSgKICBncnAgPSBjKCJBIiwgIkEiLCAiQiIsICJCIiksIAogIHNleCA9IGMoIkYiLCAiTSIsICJGIiwgIk0iKSwgCiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpCiAgKQpgYGAKCiMjIyBGaWd1cmUgNS44CmBgYHtyfQoKYGBgCgojIyMgRmlndXJlIDUuMTIKYGBge3J9CnVybCA8LSAiaHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NaWxlX3J1bl93b3JsZF9yZWNvcmRfcHJvZ3Jlc3Npb24iCnRhYmxlcyA8LSB1cmwgJT4lCiAgcmVhZF9odG1sKCkgJT4lCiAgaHRtbF9ub2RlcygidGFibGUiKQpsZW5ndGgodGFibGVzKQoKVGFibGUzIDwtIGh0bWxfdGFibGUodGFibGVzW1szXV0pCmhlYWQoVGFibGUzKQpgYGAK</div>
 
 
 
