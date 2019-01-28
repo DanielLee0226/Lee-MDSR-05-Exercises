@@ -1,0 +1,66 @@
+---
+title: "STAT 380 Homework Exercises"
+subtitle: "MDSR Chapter 05"
+author: "Daniel Lee"
+date: "Due: 27/01/2019"
+output: html_notebook
+---
+  
+# Front matter
+  
+```{r}
+# always clean up R environment
+rm(list = ls())
+
+# load all packages here
+library(mosaic)
+library(Lahman)
+library(tidyverse)
+library(lubridate)
+library(mdsr)
+library(Hmisc)
+
+```
+
+
+# Exercises
+
+### Figure 5.2
+```{r}
+
+```
+
+### Figure 5.3
+```{r}
+
+```
+
+### Figure 5.4
+```{r}
+
+```
+
+### Figure 5.5
+```{r}
+
+```
+
+### Figure 5.6
+```{r}
+
+```
+
+### Figure 5.7
+```{r}
+
+```
+
+### Figure 5.8
+```{r}
+
+```
+
+### Figure 5.12
+```{r}
+
+```
