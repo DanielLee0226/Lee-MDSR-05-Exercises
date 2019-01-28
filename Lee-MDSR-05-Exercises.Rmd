@@ -32,7 +32,7 @@ library(tidyr)
 
 # Exercises
 
-### Figure 5.2
+### Exercise 5.2
 ```{r}
 count_seasons <- function(teamname){
   Teams %>%
@@ -41,7 +41,7 @@ count_seasons <- function(teamname){
 
 ```
 
-### Figure 5.3
+### Exercise 5.3
 ```{r}
 bk_teams <- 
   c("BR1", "BR2", "BR3", "BR4", "BRO", "BRP", "BRF")
@@ -49,7 +49,7 @@ bk_teams1 <-
   sapply(FUN = bk_teams)
 ```
 
-### Figure 5.4
+### Exercise 5.4
 ```{r}
 Marriage %>%
   select(appdate, ceremonydate, dob) %>%
@@ -60,7 +60,7 @@ Marriage %>%
   select(appdate, ceremonydate, dob)
 ```
 
-### Figure 5.5
+### Exercise 5.5
 ```{r}
 
 x1 <- c("1900.45", "$1900.45", "1,900.45", "nearly $2000") 
@@ -70,8 +70,16 @@ as.factor(x2)
 ```
 
 
-### Figure 5.6
+### Exercise 5.6
 ```{r}
+ds1 <- 
+  tibble(
+  id = c(1,2,3,1,2,3), 
+  group = c("T", "T", "T", "C", "C", "C"), 
+  vals = c(4.00, 6.00, 8.00, 5.00, 6.00, 10.00)
+  )
+ds1
+
 tab <- xtable(ds1) 
 print(tab, floating=FALSE)
 
@@ -79,11 +87,9 @@ Treat <- filter(ds1, group=="T")
 Control <- filter(ds1, group=="C") 
 all <- mutate(Treat, diff = Treat$vals - Control$vals) 
 all
-
-ds1
 ```
 
-### Figure 5.7
+### Exercise 5.7
 ```{r}
 data_long <- 
   tibble(
@@ -99,18 +105,18 @@ data_long
 
 datawide <-
   data_long %>%
-  gather(gpr, meanL, spread(sex))
+  spread(key = sex)
 
 datawide
 ```
 
-### Figure 5.8
+### Exercise 5.8
 ```{r}
 dplyr::do(HELPrct)
 
 ```
 
-### Figure 5.12
+### Exercise 5.12
 ```{r}
 url <- "http://en.wikipedia.org/wiki/Mile_run_world_record_progression"
 tables <- url %>%

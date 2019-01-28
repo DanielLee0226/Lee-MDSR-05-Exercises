@@ -201,8 +201,8 @@ The following objects are masked from ‘package:Hmisc’:
 </div>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
-<div id="figure-5.2" class="section level3">
-<h3>Figure 5.2</h3>
+<div id="exercise-5.2" class="section level3">
+<h3>Exercise 5.2</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY291bnRfc2Vhc29ucyA8LSBmdW5jdGlvbih0ZWFtbmFtZSl7XG4gIFRlYW1zICU+JVxuICAgIHN1YnNldChUZWFtcywgdGVhbUlEID09IHRlYW1uYW1lKSAlPiVcbiAgICBjb3VudChUZWFtcywgdGVhbUlEKX1cbmBgYCJ9 -->
@@ -214,8 +214,8 @@ The following objects are masked from ‘package:Hmisc’:
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="figure-5.3" class="section level3">
-<h3>Figure 5.3</h3>
+<div id="exercise-5.3" class="section level3">
+<h3>Exercise 5.3</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmtfdGVhbXMgPC0gYyhcIkJSMVwiLCBcIkJSMlwiLCBcIkJSM1wiLCBcIkJSNFwiLCBcIkJST1wiLCBcIkJSUFwiLCBcIkJSRlwiKVxuYmtfdGVhbXMxIDwtIHNhcHBseShGVU4gPSBia190ZWFtcylcbmBgYCJ9 -->
@@ -229,8 +229,8 @@ bk_teams1 &lt;- sapply(FUN = bk_teams)</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="figure-5.4" class="section level3">
-<h3>Figure 5.4</h3>
+<div id="exercise-5.4" class="section level3">
+<h3>Exercise 5.4</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTWFycmlhZ2UgJT4lXG4gIHNlbGVjdChhcHBkYXRlLCBjZXJlbW9ueWRhdGUsIGRvYikgJT4lXG4gIGdsaW1wc2UoKVxuYGBgIn0= -->
@@ -260,8 +260,8 @@ $ dob          [3m[38;5;246m&lt;fct&gt;[39m[23m 4/11/64, 8/6/64, 2/20/62, 5/
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="figure-5.5" class="section level3">
-<h3>Figure 5.5</h3>
+<div id="exercise-5.5" class="section level3">
+<h3>Exercise 5.5</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKHgyKSBcblxuYGBgIn0= -->
@@ -275,41 +275,98 @@ Levels: $1900.45 1,900.45 1900.45 nearly $2000</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="figure-5.6" class="section level3">
-<h3>Figure 5.6</h3>
+<div id="exercise-5.6" class="section level3">
+<h3>Exercise 5.6</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRXhlcjVfNyA8LSBcbiAgdGliYmxlKFxuICBncnAgPSBjKFwiQVwiLCBcIkFcIiwgXCJCXCIsIFwiQlwiKSwgXG4gIHNleCA9IGMoXCJGXCIsIFwiTVwiLCBcIkZcIiwgXCJNXCIpLCBcbiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpXG4gIClcbnRhYiA8LSB4dGFibGUoZHMxKSBcbmBgYCJ9 -->
-<pre class="r"><code>Exer5_7 &lt;- 
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHMxIDwtIFxuICB0aWJibGUoXG4gIGlkID0gYygxLDIsMywxLDIsMyksIFxuICBncm91cCA9IGMoXCJUXCIsIFwiVFwiLCBcIlRcIiwgXCJDXCIsIFwiQ1wiLCBcIkNcIiksIFxuICB2YWxzID0gYyg0LjAwLCA2LjAwLCA4LjAwLCA1LjAwLCA2LjAwLCAxMC4wMClcbiAgKVxuZHMxXG5gYGAifQ== -->
+<pre class="r"><code>ds1 &lt;- 
   tibble(
-  grp = c(&quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;), 
-  sex = c(&quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;), 
-  meanL = c(0.22, 0.47, 0.33, 0.55)
+  id = c(1,2,3,1,2,3), 
+  group = c(&quot;T&quot;, &quot;T&quot;, &quot;T&quot;, &quot;C&quot;, &quot;C&quot;, &quot;C&quot;), 
+  vals = c(4.00, 6.00, 8.00, 5.00, 6.00, 10.00)
   )
-tab &lt;- xtable(ds1) </code></pre>
+ds1</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4geHRhYmxlKGRzMSkgOiBvYmplY3QgJ2RzMScgbm90IGZvdW5kXG4ifQ== -->
-<pre><code>Error in xtable(ds1) : object 'ds1' not found</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="figure-5.7" class="section level3">
-<h3>Figure 5.7</h3>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NiwibnJvdyI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERpaXVCaVlHQmdZbUJtWldSZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0JqTFlnRmdBSkF1VGNNUmdPQ0VZYUdyZFlBeGZMQ0lNREh3Z3RmWjdOTDRlNm8vUnRMOHF0eVB3ZGFzOG5ILzVPcGR0d2VMcmNIVmJxaDY2cnhPcGhxdmIrTG9WeUhwamZ4RW9XdlhRQTgxdTF0elV4THdnWWprd082NENiZGI0ZXRqK0VjaG1MbHY3bXpOQllKYjlrek1nY0JZdGtEaUw4c3YxOGhKelU0dUJIRjVRYURZQWlmLy8vLzlCVThnS1V5UUFEbEdJSUhONlVRR01XWnhhQVdlbStDQ1lRWEMxQlVYSUx2WkJ0eUE1SjdFWVpnRk1rQ3Nsc1NSUkw2MElhRGVROXc5TkMzdCtRVWxtZmg1UUV4TW9ubG5STkRNV29Ra0lsT2FCZkpHaW01eFJtcGV0YTJ3Q3NnRXNEd0c4VURZTEVwc05ZaWZ6ZjZoWnJGQ3oyRkx6MGpQelVtR096MGxNU3MyQmN2aUFZUW9PTGIyQ29zeThFcGhYZ0tMRmVpWDVKWWt3ZFZ6SitUa3dFYkRuR1A0QkFGNU1ka3JXQWdBQSJ9 -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzVlFzVTdETUJDOTJFbEtJN1ZVZ29HUmdiVVpFRHVWNEFzUVExZVRwQ1VpMkpIakFDT2Z6TXpRY0U3dUpMRG9TZkc5ZStkM3o1ZUgrKzExdHMwQVFJQk1JaEFTWVN6d2lDQ0d1YzhmQVBJTWdlOHM4VXR2djJDTURWQSttZkl4SG1QbGRUenc4VGk0K3dlUTYyWkZVeThvWDFJK0QvZ3JOdjJ6UnFMVmE5WFJVeVNSb2k2NXZiZW1iNm1JMzFUVEJmcTVOZTg1ejFoNDdTY2V3ekI4aDBaRm96bzJZaklybFZQNXpxSWVxME1nbVpuVzFVYWpTUGdmblFUaXlBYkVhYS85UzhwMThkenJsL1dOTnhqYlV5d0lwNyt3bkN6RlFLTVNHcFZXZWwvcml0L2VxS2Vxb1dLSkc0OEw1NjJ0dGVOTmtPMXlaNXppZTFsaEdtYkczZUR3QTR4TU85SldBZ0FBIn0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["grp"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sex"],"name":[2],"type":["chr"],"align":["left"]},{"label":["sdL"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sdR"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["gpr"],"name":[5],"type":["chr"],"align":["left"]},{"label":["meanL"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"F","3":"0.11","4":"0.08","5":"meanR","6":"0.34"},{"1":"A","2":"M","3":"0.33","4":"0.33","5":"meanR","6":"0.57"},{"1":"B","2":"F","3":"0.11","4":"0.07","5":"meanR","6":"0.40"},{"1":"B","2":"M","3":"0.31","4":"0.27","5":"meanR","6":"0.65"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["group"],"name":[2],"type":["chr"],"align":["left"]},{"label":["vals"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"T","3":"4"},{"1":"2","2":"T","3":"6"},{"1":"3","2":"T","3":"8"},{"1":"1","2":"C","3":"5"},{"1":"2","2":"C","3":"6"},{"1":"3","2":"C","3":"10"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFiIDwtIHh0YWJsZShkczEpIFxucHJpbnQodGFiLCBmbG9hdGluZz1GQUxTRSlcbmBgYCJ9 -->
+<pre class="r"><code>tab &lt;- xtable(ds1) 
+print(tab, floating=FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJSBsYXRleCB0YWJsZSBnZW5lcmF0ZWQgaW4gUiAzLjUuMSBieSB4dGFibGUgMS44LTMgcGFja2FnZVxuJSBTdW4gSmFuIDI3IDIyOjIxOjMwIDIwMTlcblxcYmVnaW57dGFidWxhcn17cnJscn1cbiAgXFxobGluZVxuICYgaWQgJiBncm91cCAmIHZhbHMgXFxcXCBcbiAgXFxobGluZVxuMSAmIDEuMDAgJiBUICYgNC4wMCBcXFxcIFxuICAyICYgMi4wMCAmIFQgJiA2LjAwIFxcXFwgXG4gIDMgJiAzLjAwICYgVCAmIDguMDAgXFxcXCBcbiAgNCAmIDEuMDAgJiBDICYgNS4wMCBcXFxcIFxuICA1ICYgMi4wMCAmIEMgJiA2LjAwIFxcXFwgXG4gIDYgJiAzLjAwICYgQyAmIDEwLjAwIFxcXFwgXG4gICBcXGhsaW5lXG5cXGVuZHt0YWJ1bGFyfVxuIn0= -->
+<pre><code>% latex table generated in R 3.5.1 by xtable 1.8-3 package
+% Sun Jan 27 22:21:30 2019
+\begin{tabular}{rrlr}
+  \hline
+ &amp; id &amp; group &amp; vals \\ 
+  \hline
+1 &amp; 1.00 &amp; T &amp; 4.00 \\ 
+  2 &amp; 2.00 &amp; T &amp; 6.00 \\ 
+  3 &amp; 3.00 &amp; T &amp; 8.00 \\ 
+  4 &amp; 1.00 &amp; C &amp; 5.00 \\ 
+  5 &amp; 2.00 &amp; C &amp; 6.00 \\ 
+  6 &amp; 3.00 &amp; C &amp; 10.00 \\ 
+   \hline
+\end{tabular}</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVHJlYXQgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PVwiVFwiKSBcbkNvbnRyb2wgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PVwiQ1wiKSBcbmFsbCA8LSBtdXRhdGUoVHJlYXQsIGRpZmYgPSBUcmVhdCR2YWxzIC0gQ29udHJvbCR2YWxzKSBcbmFsbFxuYGBgIn0= -->
+<pre class="r"><code>Treat &lt;- filter(ds1, group==&quot;T&quot;) 
+Control &lt;- filter(ds1, group==&quot;C&quot;) 
+all &lt;- mutate(Treat, diff = Treat$vals - Control$vals) 
+all</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVFTMDdETUJDZE9BN1FTQzJWMkxEc0Jab0ZZazhYbkFDeDZOYmswMW9FTzBvY1lNbk40RWk5QUEzamRLWnFMVWF5NS9sTjNwdVpQRDJ1NzlKMUNnQUM0aVFDRVNPVUFxOElKRXg4L2dTSWJ6eUxaNFluZnRqQkdDdWdmQVVjYzE5bjRmTS9nQ3hXYzVMZVVsNGNMY2I2OXc3TzR1ZUl6bVpMakhvck8rb3JpUlM2NFBLbXRYMUREL211Nm81eG9hc3E4SnEwOWlOanY2bjMrY0pyR0liZnNHbGVxNDZiTXBrV3lxbXNhbEdQcjMwZ3ViU04wOWFnU1BnL21RVGlxQTJJNjk3NFNZcGx2dTNONi9MZU54akxoNWdTamsrd1BMUVVBMWtsWkhWUm1vMDJKYzllcTVleXBzY01OeDRYenBwV0c4ZWJJTnRsempyRjM2VzVyWmtaZDRQOUh6U01qNGszQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["group"],"name":[2],"type":["chr"],"align":["left"]},{"label":["vals"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["diff"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"T","3":"4","4":"-1"},{"1":"2","2":"T","3":"6","4":"0"},{"1":"3","2":"T","3":"8","4":"-2"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="figure-5.8" class="section level3">
-<h3>Figure 5.8</h3>
+<div id="exercise-5.7" class="section level3">
+<h3>Exercise 5.7</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YV9sb25nIDwtIFxuICB0aWJibGUoXG4gIGdycCA9IGMoXCJBXCIsIFwiQVwiLCBcIkJcIiwgXCJCXCIpLCBcbiAgc2V4ID0gYyhcIkZcIiwgXCJNXCIsIFwiRlwiLCBcIk1cIiksIFxuICBtZWFuTCA9IGMoMC4yMiwgMC40NywgMC4zMywgMC41NSksXG4gIHNkTCA9IGMoMC4xMSwgMC4zMywgMC4xMSwgMC4zMSksXG4gIG1lYW5SID0gYygwLjM0LCAwLjU3LCAwLjQwLCAwLjY1KSxcbiAgc2RSID0gYygwLjA4LCAwLjMzLCAwLjA3LCAwLjI3KVxuICApXG5kYXRhX2xvbmdcbmBgYCJ9 -->
+<pre class="r"><code>data_long &lt;- 
+  tibble(
+  grp = c(&quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;), 
+  sex = c(&quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;), 
+  meanL = c(0.22, 0.47, 0.33, 0.55),
+  sdL = c(0.11, 0.33, 0.11, 0.31),
+  meanR = c(0.34, 0.57, 0.40, 0.65),
+  sdR = c(0.08, 0.33, 0.07, 0.27)
+  )
+data_long</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NiwibnJvdyI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERpaXVCaVlHQmdZbUJtWldSZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0JqTFlnRmdBSkF1VGNNUmdPQ0VZYUdyZFlBeGZMQ0lNREh3Z3RmWm5OTDRlNm8vUnRMOG5VdlhRZloySS9WVzVIWUd2VytYdEg4NEVnVmx3ZFh1ZzZtRHlNUDdsNjF5MkJZdXZ3OVZkQllwcWZEMXMvd2dreW1WcmZ4TmlqdjJUTXlCd0ZxNXVDOWk2YXJoNUcxKzNBbGx2N0M4Q1Jhc2VlcUFGQ0d0ZVltNXFNZFNEYkZCQjV2U2lBaGl6T0xVQ3BqUTNOVEhQQnk2ZTRvTXNIb1FRRDBLemdyTW92MXdQWmcwdktISWFnTVQvLy8vL29Mc2xPU2V4R09ZV21DQlhTbUpKb2w1YUVWQS9rUGNQVFF0N2ZrRkpabjRlVUJNVEtGWlowVFF6RnFFSkNKVG1nVnlTb3B1Y1VacVhyV3RvQUxJQkxBOEJ2RkEyQ3hLYkRXSW4wMytvV2F4UXM5aFM4OUl6ODFKaGpzOUpURXJOZ1hMNGdGNEcrMWl2b0NnenJ3VG1GYUJvc1Y1SmZra2lUQjFYY240T1RBVHNPWVovQUF4M3hETEVBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["grp"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sex"],"name":[2],"type":["chr"],"align":["left"]},{"label":["meanL"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sdL"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["meanR"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["sdR"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"F","3":"0.22","4":"0.11","5":"0.34","6":"0.08"},{"1":"A","2":"M","3":"0.47","4":"0.33","5":"0.57","6":"0.33"},{"1":"B","2":"F","3":"0.33","4":"0.11","5":"0.40","6":"0.07"},{"1":"B","2":"M","3":"0.55","4":"0.31","5":"0.65","6":"0.27"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YXdpZGUgPC1cbiAgZGF0YV9sb25nICU+JVxuICBzcHJlYWQoa2V5ID0gXCJzZXhcIilcbmBgYCJ9 -->
+<pre class="r"><code>datawide &lt;-
+  data_long %&gt;%
+  spread(key = &quot;sex&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZXZhbF90aWR5KGVucXVvKHZhciksIHZhcl9lbnYpIDogb2JqZWN0ICcnIG5vdCBmb3VuZFxuIn0= -->
+<pre><code>Error in eval_tidy(enquo(var), var_env) : object '' not found</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="exercise-5.8" class="section level3">
+<h3>Exercise 5.8</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHBseXI6OmRvKEhFTFByY3QpXG5gYGAifQ== -->
@@ -321,8 +378,8 @@ tab &lt;- xtable(ds1) </code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="figure-5.12" class="section level3">
-<h3>Figure 5.12</h3>
+<div id="exercise-5.12" class="section level3">
+<h3>Exercise 5.12</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGVzIDwtIHVybCAlPiVcbiAgcmVhZF9odG1sKCkgJT4lXG4gIGh0bWxfbm9kZXMoXCJ0YWJsZVwiKVxuXG5gYGAifQ== -->
@@ -338,7 +395,7 @@ tab &lt;- xtable(ds1) </code></pre>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAzODAgSG9tZXdvcmsgRXhlcmNpc2VzIgpzdWJ0aXRsZTogIk1EU1IgQ2hhcHRlciAwNSIKYXV0aG9yOiAiRGFuaWVsIExlZSIKZGF0ZTogIkR1ZTogMjcvMDEvMjAxOSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQogIAojIEZyb250IG1hdHRlcgogIApgYGB7cn0KIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgbG9hZCBhbGwgcGFja2FnZXMgaGVyZQpsaWJyYXJ5KG1vc2FpYykKbGlicmFyeShMYWhtYW4pCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShtZHNyKQpsaWJyYXJ5KEhtaXNjKQpsaWJyYXJ5KHJlYWRyKQpoZWFkKFRlYW1zKQphdHRhY2goVGVhbXMpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkocGx5cikKbGlicmFyeSh4dGFibGUpCmxpYnJhcnkobW9zYWljRGF0YSkKbGlicmFyeSh0aWR5cikKYGBgCgoKIyBFeGVyY2lzZXMKCiMjIyBGaWd1cmUgNS4yCmBgYHtyfQpjb3VudF9zZWFzb25zIDwtIGZ1bmN0aW9uKHRlYW1uYW1lKXsKICBUZWFtcyAlPiUKICAgIHN1YnNldChUZWFtcywgdGVhbUlEID09IHRlYW1uYW1lKSAlPiUKICAgIGNvdW50KFRlYW1zLCB0ZWFtSUQpfQoKYGBgCgojIyMgRmlndXJlIDUuMwpgYGB7cn0KYmtfdGVhbXMgPC0gCiAgYygiQlIxIiwgIkJSMiIsICJCUjMiLCAiQlI0IiwgIkJSTyIsICJCUlAiLCAiQlJGIikKYmtfdGVhbXMxIDwtIAogIHNhcHBseShGVU4gPSBia190ZWFtcykKYGBgCgojIyMgRmlndXJlIDUuNApgYGB7cn0KTWFycmlhZ2UgJT4lCiAgc2VsZWN0KGFwcGRhdGUsIGNlcmVtb255ZGF0ZSwgZG9iKSAlPiUKICBnbGltcHNlKCkKCk1hcnJpYWdlICU+JQogIG11dGF0ZShhcHBkYXRlID0gbWR5KGFwcGRhdGUpLCBjZXJlbW9ueWRhdGUgPSBtZHkoY2VyZW1vbnlkYXRlKSwgZG9iID0gbWR5KGRvYikpICU+JQogIHNlbGVjdChhcHBkYXRlLCBjZXJlbW9ueWRhdGUsIGRvYikKYGBgCgojIyMgRmlndXJlIDUuNQpgYGB7cn0KCngxIDwtIGMoIjE5MDAuNDUiLCAiJDE5MDAuNDUiLCAiMSw5MDAuNDUiLCAibmVhcmx5ICQyMDAwIikgCngyIDwtIGFzLmZhY3Rvcih4MSkKcGFyc2VfbnVtYmVyKHgxKQphcy5mYWN0b3IoeDIpIApgYGAKCgojIyMgRmlndXJlIDUuNgpgYGB7cn0KdGFiIDwtIHh0YWJsZShkczEpIApwcmludCh0YWIsIGZsb2F0aW5nPUZBTFNFKQoKVHJlYXQgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJUIikgCkNvbnRyb2wgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJDIikgCmFsbCA8LSBtdXRhdGUoVHJlYXQsIGRpZmYgPSBUcmVhdCR2YWxzIC0gQ29udHJvbCR2YWxzKSAKYWxsCgpkczEKYGBgCgojIyMgRmlndXJlIDUuNwpgYGB7cn0KZGF0YV9sb25nIDwtIAogIHRpYmJsZSgKICBncnAgPSBjKCJBIiwgIkEiLCAiQiIsICJCIiksIAogIHNleCA9IGMoIkYiLCAiTSIsICJGIiwgIk0iKSwgCiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpLAogIHNkTCA9IGMoMC4xMSwgMC4zMywgMC4xMSwgMC4zMSksCiAgbWVhblIgPSBjKDAuMzQsIDAuNTcsIDAuNDAsIDAuNjUpLAogIHNkUiA9IGMoMC4wOCwgMC4zMywgMC4wNywgMC4yNykKICApCgpkYXRhX2xvbmcKCmRhdGF3aWRlIDwtCiAgZGF0YV9sb25nICU+JQogIGdhdGhlcihncHIsIG1lYW5MLCBzcHJlYWQoc2V4KSkKCmRhdGF3aWRlCmBgYAoKIyMjIEZpZ3VyZSA1LjgKYGBge3J9CmRwbHlyOjpkbyhIRUxQcmN0KQoKYGBgCgojIyMgRmlndXJlIDUuMTIKYGBge3J9CnVybCA8LSAiaHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9NaWxlX3J1bl93b3JsZF9yZWNvcmRfcHJvZ3Jlc3Npb24iCnRhYmxlcyA8LSB1cmwgJT4lCiAgcmVhZF9odG1sKCkgJT4lCiAgaHRtbF9ub2RlcygidGFibGUiKQpsZW5ndGgodGFibGVzKQoKVGFibGUzIDwtIGh0bWxfdGFibGUodGFibGVzW1szXV0pCmhlYWQoVGFibGUzKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAzODAgSG9tZXdvcmsgRXhlcmNpc2VzIgpzdWJ0aXRsZTogIk1EU1IgQ2hhcHRlciAwNSIKYXV0aG9yOiAiRGFuaWVsIExlZSIKZGF0ZTogIkR1ZTogMjcvMDEvMjAxOSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQogIAojIEZyb250IG1hdHRlcgogIApgYGB7cn0KIyBhbHdheXMgY2xlYW4gdXAgUiBlbnZpcm9ubWVudApybShsaXN0ID0gbHMoKSkKCiMgbG9hZCBhbGwgcGFja2FnZXMgaGVyZQpsaWJyYXJ5KG1vc2FpYykKbGlicmFyeShMYWhtYW4pCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKbGlicmFyeShtZHNyKQpsaWJyYXJ5KEhtaXNjKQpsaWJyYXJ5KHJlYWRyKQpoZWFkKFRlYW1zKQphdHRhY2goVGVhbXMpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkocGx5cikKbGlicmFyeSh4dGFibGUpCmxpYnJhcnkobW9zYWljRGF0YSkKbGlicmFyeSh0aWR5cikKYGBgCgoKIyBFeGVyY2lzZXMKCiMjIyBFeGVyY2lzZSA1LjIKYGBge3J9CmNvdW50X3NlYXNvbnMgPC0gZnVuY3Rpb24odGVhbW5hbWUpewogIFRlYW1zICU+JQogICAgc3Vic2V0KFRlYW1zLCB0ZWFtSUQgPT0gdGVhbW5hbWUpICU+JQogICAgY291bnQoVGVhbXMsIHRlYW1JRCl9CgpgYGAKCiMjIyBFeGVyY2lzZSA1LjMKYGBge3J9CmJrX3RlYW1zIDwtIAogIGMoIkJSMSIsICJCUjIiLCAiQlIzIiwgIkJSNCIsICJCUk8iLCAiQlJQIiwgIkJSRiIpCmJrX3RlYW1zMSA8LSAKICBzYXBwbHkoRlVOID0gYmtfdGVhbXMpCmBgYAoKIyMjIEV4ZXJjaXNlIDUuNApgYGB7cn0KTWFycmlhZ2UgJT4lCiAgc2VsZWN0KGFwcGRhdGUsIGNlcmVtb255ZGF0ZSwgZG9iKSAlPiUKICBnbGltcHNlKCkKCk1hcnJpYWdlICU+JQogIG11dGF0ZShhcHBkYXRlID0gbWR5KGFwcGRhdGUpLCBjZXJlbW9ueWRhdGUgPSBtZHkoY2VyZW1vbnlkYXRlKSwgZG9iID0gbWR5KGRvYikpICU+JQogIHNlbGVjdChhcHBkYXRlLCBjZXJlbW9ueWRhdGUsIGRvYikKYGBgCgojIyMgRXhlcmNpc2UgNS41CmBgYHtyfQoKeDEgPC0gYygiMTkwMC40NSIsICIkMTkwMC40NSIsICIxLDkwMC40NSIsICJuZWFybHkgJDIwMDAiKSAKeDIgPC0gYXMuZmFjdG9yKHgxKQpwYXJzZV9udW1iZXIoeDEpCmFzLmZhY3Rvcih4MikgCmBgYAoKCiMjIyBFeGVyY2lzZSA1LjYKYGBge3J9CmRzMSA8LSAKICB0aWJibGUoCiAgaWQgPSBjKDEsMiwzLDEsMiwzKSwgCiAgZ3JvdXAgPSBjKCJUIiwgIlQiLCAiVCIsICJDIiwgIkMiLCAiQyIpLCAKICB2YWxzID0gYyg0LjAwLCA2LjAwLCA4LjAwLCA1LjAwLCA2LjAwLCAxMC4wMCkKICApCmRzMQoKdGFiIDwtIHh0YWJsZShkczEpIApwcmludCh0YWIsIGZsb2F0aW5nPUZBTFNFKQoKVHJlYXQgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJUIikgCkNvbnRyb2wgPC0gZmlsdGVyKGRzMSwgZ3JvdXA9PSJDIikgCmFsbCA8LSBtdXRhdGUoVHJlYXQsIGRpZmYgPSBUcmVhdCR2YWxzIC0gQ29udHJvbCR2YWxzKSAKYWxsCmBgYAoKIyMjIEV4ZXJjaXNlIDUuNwpgYGB7cn0KZGF0YV9sb25nIDwtIAogIHRpYmJsZSgKICBncnAgPSBjKCJBIiwgIkEiLCAiQiIsICJCIiksIAogIHNleCA9IGMoIkYiLCAiTSIsICJGIiwgIk0iKSwgCiAgbWVhbkwgPSBjKDAuMjIsIDAuNDcsIDAuMzMsIDAuNTUpLAogIHNkTCA9IGMoMC4xMSwgMC4zMywgMC4xMSwgMC4zMSksCiAgbWVhblIgPSBjKDAuMzQsIDAuNTcsIDAuNDAsIDAuNjUpLAogIHNkUiA9IGMoMC4wOCwgMC4zMywgMC4wNywgMC4yNykKICApCgpkYXRhX2xvbmcKCmRhdGF3aWRlIDwtCiAgZGF0YV9sb25nICU+JQogIHNwcmVhZChrZXkgPSBzZXgpCgpkYXRhd2lkZQpgYGAKCiMjIyBFeGVyY2lzZSA1LjgKYGBge3J9CmRwbHlyOjpkbyhIRUxQcmN0KQoKYGBgCgojIyMgRXhlcmNpc2UgNS4xMgpgYGB7cn0KdXJsIDwtICJodHRwOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL01pbGVfcnVuX3dvcmxkX3JlY29yZF9wcm9ncmVzc2lvbiIKdGFibGVzIDwtIHVybCAlPiUKICByZWFkX2h0bWwoKSAlPiUKICBodG1sX25vZGVzKCJ0YWJsZSIpCmxlbmd0aCh0YWJsZXMpCgpUYWJsZTMgPC0gaHRtbF90YWJsZSh0YWJsZXNbWzNdXSkKaGVhZChUYWJsZTMpCmBgYAo=</div>
 
 
 
